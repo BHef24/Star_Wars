@@ -9,8 +9,8 @@ os.environ['SDL_VIDEO_CENTERED'] = '1'
 pygame.init()
 
 # constants
-WIDTH = 800
-HEIGHT = 800
+WIDTH = 1440
+HEIGHT = 900
 FPS = 3
 
 # RGB colors
@@ -32,7 +32,7 @@ my_images = [
 
 # changes size of all images to fit screen
 for i in range(len(my_images)):
-  my_images[i] = pygame.transform.scale(my_images[i], (300, 300))
+  my_images[i] = pygame.transform.scale(my_images[i], (500, 500))
 
 # set Window
 WINDOW = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -47,7 +47,7 @@ text = font.render('A LONG TIME AGO, IN A GALAXY FAR FAR AWAY', True, yellow, bl
 textRect = text.get_rect()
 
 # position the text
-textRect.center = (WIDTH // 3, HEIGHT // 20)
+textRect.center = (WIDTH // 2, HEIGHT // 20)
 
 # display text
 WINDOW.blit(text, textRect)
@@ -56,7 +56,7 @@ pygame.display.flip()
 pygame.display.set_caption("Graphic Artist: Zayn ")
 text = font.render("Graphic Artist: Zayn", True, yellow, black)
 textRect = text.get_rect()
-textRect.center = (WIDTH // 3, HEIGHT // 2.7)
+textRect.center = (WIDTH // 2, HEIGHT // 6)
 WINDOW.blit(text, textRect)
 pygame.display.flip()
 
@@ -64,7 +64,7 @@ pygame.display.flip()
 pygame.display.set_caption("Programmers: Sarah, Ben, Hope  ")
 text = font.render("Programmers: Sarah, Ben, Hope", True, yellow, black)
 textRect = text.get_rect()
-textRect.center = (WIDTH // 3, HEIGHT // 2.3)
+textRect.center = (WIDTH // 2, HEIGHT // 8)
 WINDOW.blit(text, textRect)
 pygame.display.flip()
 # draw shape function
@@ -73,7 +73,7 @@ def drawShape():
   global image_count
   if (image_count == 3):
      image_count = 0
-  WINDOW.blit(my_images[image_count], (120, 100))
+  WINDOW.blit(my_images[image_count], (470, 200))
   pygame.display.flip()
   image_count += 1
   
